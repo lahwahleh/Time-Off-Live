@@ -1,0 +1,76 @@
+<ion-view view-title="Create New User">
+  <!-- <div class="bar bar-subheader item-input-inset bar-light">
+                <label class="item-input-wrapper"><i class="icon ion-search placeholder-icon"></i>
+                <input type="search" ng-model="query"placeholder="Search">
+                </label>
+            </div> -->
+  <ion-content class="padding" style="background-color:#ffffff;">
+  <br>
+  <!-- <h3 align="center"> Details for New User </h3> -->
+<!--   <br> -->
+<a class="button button-full button-positive" href="#main/admin"> Back </a>
+      <form ng-submit="onSubmit(newUserForm.$valid)" name="newUserForm">
+
+         <div class="list list-inset">
+
+         <label for="employee_no" class="item item-input">
+                        <input type="text" name="employee_no" id="employee_no" placeholder="Employee Number" ng-model="userModel.employee_no">
+                    </label><br/>
+                    <label for="firstname" class="item item-input">
+                        <input type="text" name="firstname" id="firstname" placeholder="Firstname" ng-model="userModel.firstname">
+                    </label> <br/>
+                    
+           <label for="lastname" class="item item-input">
+                        <input type="text" name="lastname" id="lastname" placeholder="Lastname" ng-model="userModel.lastname">
+                    </label><br/>
+                    
+                    <label for="email" class="item item-input">
+                        <input type="email" name="email" id="email" placeholder="Email" ng-model="userModel.email">
+                    </label><br/>
+                    <label for="password" class="item item-input">
+                        <input id="password" name="password" type="password" placeholder="Default Password"  ng-model="userModel.password" >
+                         </label><br/> 
+          
+                          <label for="dept" class="item item-input item-select">
+                  <div class="input-label">
+                    Department
+                  </div>
+                  <select name="dept" id="dept" ng-model="userModel.dept">
+                    <option>Accounts</option>
+                    <option selected>HR</option>
+                    <option>IS</option>
+                    <option>PMO</option>
+                  </select>
+                </label><br>
+
+
+                     
+
+           <label for="phoneNumber" class="item item-input">
+                        <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="Phone number" ng-model="userModel.phoneNumber">
+                    </label>
+                   
+                   <label for="authtype" class="item item-input item-select">
+                <div class="input-label">
+                  Auth.Type
+                </div>
+                <select name="authtype" id="authtype" ng-model="userModel.authtype">
+                  <option>Admin</option>
+                  <option selected>User</option>
+                  <option>SuperUser</option>
+                </select>
+              </label><br>
+
+
+           <label for="leave_balance" class="item item-input">
+                        <input type="text" name="leave_balance" id="leave_balance" placeholder="Leave Balance" ng-model="userModel.leave_balance">
+                    </label><br/>
+
+
+                  <button class="button button-block button-outline button-balanced" type="submit">
+      <strong> Create</strong>
+      </button>
+</div>
+</form>
+  </ion-content>
+</ion-view>

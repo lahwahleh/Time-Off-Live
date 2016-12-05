@@ -1,0 +1,35 @@
+<ion-view view-title="Pending Detail">
+
+        <ion-nav-buttons side="primary">
+            <button class="button button-icon ion-minus-circled" ng-click="data.showDelete =!data.showDelete; data.showReorder= false;"></button> 
+        </ion-nav-buttons>  
+
+        <ion-nav-buttons side="secondary">   
+            <button class="button button-icon ion-navicon" ng-click="data.showReorder =!data.showReorder; data.showDelete = false;"></button>
+        </ion-nav-buttons>
+
+            <div class="bar bar-subheader item-input-inset bar-light padding">
+                <label class="item-input-wrapper"><i class="icon ion-search placeholder-icon"></i>
+                <input type="search" ng-model="query" placeholder="Search">
+                </label>
+            </div>
+      <ion-content class="has-subheader"><ion-refresher on-refresh="doRefresh()"></ion-refresher>
+          <ion-list show-delete="data.showDelete" show-reorder="data.showReorder">
+              <ion-item ng-class="{'star': item.star}" ng-repeat='item in application | filter: query'  href="#/main/pendings/{{ item.user_appDate }}">
+                          <h1>{{item.user_relName}} </h1>
+                          <h4>{{item.user_relEmail}}</h4>
+                          <h4>{{item.user_leaveType}}</h4>
+                          <h4>{{item.user_dept}}</h4>
+                       <!--    <p align="justify">{{item.user_ | limitTo: 30}}
+                          {{ item.reason.length > 70 ? '&hellip;' : '...'}}</p> -->
+                      <button class="button button-clear icon ion-star button-assertive" ng-click="toggleStar(item)" ng-show="item.star"></button>
+                      <ion-option-button class="button-calm" ng-click="toggleStar(item)"><i class="icon ion-star"></i></ion-option-button>
+                      <ion-option-button class="button-energized" ng-click="(item)"><i class="icon ion-android-share-alt"></i></ion-option-button>
+                      <ion-delete-button class="ion-minus-circled" ng-click="onItemDelete(item)"></ion-delete-button>
+                      <ion-reorder-button class="ion-navicon" on-reorder="moveItem(item, $fromIndex, $toIndex)"></ion-reorder-button>
+             </ion-item>
+       </ion-list>
+      </ion-content>
+    </ion-view>
+    
+    

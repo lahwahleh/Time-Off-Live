@@ -1,0 +1,34 @@
+<!-- <ion-view view-title="Admin" name="dashboard-view">
+  <ion-content class="padding">
+      Strictly for Admin Users.
+  </ion-content>
+</ion-view>  -->
+ <ion-view view-title="Admin" name="dashboard-view">
+  <ion-nav-buttons side="right">
+    <button class="button icon-left ion-log-out button-stable" ng-click="logout()">Logout</button>
+  </ion-nav-buttons>
+ 
+  <ion-content class="padding">
+    <div class="row"><div class="col text-center">
+      <h3 class="title">Welcome HR</h3>
+      <br><br><br>
+      <a class="button button-full button-positive" href="#main/newuser">
+       Create User
+      </a>
+      <a class="button button-full button-energized" href="#main/pendings">
+       Pending Approvals
+      </a>
+      <a class="button button-full button-balanced" href="#main/onleaveII">
+       View Staff on Leave
+      </a>
+       <a class="button button-full button-royal" ng-click="" href="#main/reports" >
+      Generate Reports
+      </a>
+       <button class="button button-full button-assertive" ng-click="">
+        Remove User
+      </button>
+      <br><br>
+      {{response}}
+    </div></div>
+  </ion-content>
+</ion-view>

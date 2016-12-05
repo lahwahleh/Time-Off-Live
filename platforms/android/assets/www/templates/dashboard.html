@@ -1,0 +1,24 @@
+<ion-view view-title="Dashboard" name="dashboard-view">
+  <ion-nav-buttons side="right">
+    <button class="button icon-left ion-log-out button-stable" ng-click="logout()">Logout</button>
+  </ion-nav-buttons>
+ 
+  <ion-content class="padding">
+    <div class="row"><div class="col text-center">
+      <h3 class="title">Welcome {{username}}!</h3>
+      <h4>Your Leave Balance is: {{leavebalance}} days</h4>
+      <br><br><br>
+      <a class="button button-full button-positive" href="#main/apply">
+       Apply For Leave
+      </a>
+      <a class="button button-full button-energized" href="#main/onleave">
+       View Staff On Leave
+      </a>
+      <button class="button button-full button-assertive" ng-click="">
+       Return from Leave
+      </button>
+      <br><br>
+      {{response}}
+    </div></div>
+  </ion-content>
+</ion-view>
