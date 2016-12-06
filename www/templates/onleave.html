@@ -10,15 +10,6 @@
                 </label>
             </div>
   <ion-content class="padding" style="background-color:#ffffff;">
-  <br>
-  <br>
-      <a  href="#main/dash"> <img id="button" src="img/tap.png"> </a>
-       <br>
-  <br>
-               <!-- <a class="button button-full button-positive" href="#main/dashboard"> Back </a> -->
-
-      <!-- <div class="item-text-wrap" ng-repeat="item in application | filter: { user_status: whichapplication }"> -->
-            <!-- <div class="item-text-wrap" ng-repeat='item in application | filter: query'  href="#/main/pendings/{{ item.user_leaveType }}"> -->
                     <ion-item ng-class="{'star': item.star}" ng-repeat='item in application | filter: query' >
                           <h1>{{item.user_Uname}} </h1>
                           <h4>Reliever's Name: {{item.user_relName}} </h4>

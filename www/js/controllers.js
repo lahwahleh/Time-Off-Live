@@ -111,200 +111,6 @@ angular.module('starter')
 
 
 
-
-
- // Apply for leave Controller 
-// .controller('AppleaveCtrl', function($scope, $http,$location,$state,$ionicPopup,$window){
-
-//                   var dt = $.jStorage.get("dataserve");
-//                   console.log(dt.user_leave_balance);
-//                           var LeaveBal = dt.user_leave_balance;
-//                           var max = LeaveBal;
-
-//                     min = 1;
-//                     select = document.getElementById('LeaveDays');
-
-//                     for (var i = min; i<=max; i++){
-//                        var opt = document.createElement('option');
-//                        opt.value = i;
-//                        opt.innerHTML = i;
-//                        // select.appendChild(opt);
-//                     }
-         
-
-
-//     $scope.applyModel = {};
-
-//     $scope.onSubmit = function(valid) {
-
-//       if (valid)
-//        {
-//         var dt = $.jStorage.get("dataserve");
-//         $scope.applyModel.uId = dt.user_id;
-//           console.log(dt.user_id);
-//           console.log(dt.user_firstname);
-//           console.log($scope.applyModel.uId);
-
-//              var ds = $.jStorage.get("dataserve");
-//         $scope.applyModel.Uname = ds.user_firstname + " "+ ds.user_lastname;
-
-//          var dp = $.jStorage.get("dataserve");
-//         $scope.applyModel.leavebalance = dp.user_leave_balance;
-
-
-//          var dt = $.jStorage.get("dataserve");
-//         $scope.applyModel.useremail = dp.user_email;
-
-
-//       $http.post('http://alphaprojects.site:3000/timeoffapi/application',$scope.applyModel)
-//         .success(function(data){
-//             console.log(":)");
-//             $scope.applyModel.uId = dt.user_id;
-//              console.log($scope.applyModel);
-
-//             // $location.path('/dash');
-//             // $state.go('/dash');
-//         }).error(function(data){
-//             console.log(":(")
-//         });
-
-//       } else {
-//           console.log("Invalid Form!");
-//       }
-
-//     };
-
-
-//     $http.get('http://alphaprojects.site:3000/timeoffapi/application').success(function(data){
-//         $scope.application = data.application;
-//         $scope.whichapplication =$state.params.aId;
-//         $scope.data = { showDelete: false,showReorder: false };
-
-//         // console.log($scope.item.relName);
-//         // console.log(relName);
-//         var dt = $.jStorage.get("dataserve");
-//         console.log(dt.user_firstname);
-
-//          var ds = $.jStorage.get("dataserve");
-        
-//         $scope.onItemDelete = function(item) {
-//           $scope.application.splice($scope.application.indexOf(item), 1);
-//         }
-
-//         $scope.doRefresh = function(){
-//           $http.get('http://alphaprojects.site:3000/timeoffapi/application').success(function(data){
-//             $scope.application = data.application;
-//             $scope.$broadcast('scroll.refreshComplete');
-//           });
-//         }
-
-//         $scope.toggleStar = function(item){
-//             item.star = !item.star;
-//         }
-
-//         $scope.moveItem = function(item, fromIndex, toIndex){
-//           $scope.application.splice(fromIndex, 1);
-//           $scope.application.splice(toIndex, 0, item);
-//         };
-//   });
-
-
-//     $scope.Accept = function() {
-// // $scope.item = {};
-// console.log($("#status").text());
-// console.log($("#email").text());
-
-// var stat = $("#status").text();
-// var email = $("#email").text();
-          
-
-//       $http.put('http://alphaprojects.site:3000/timeoffapi/application', {relEmail:email,status:'2'})
-//         .success(function(data){
-//             console.log(":)");
-//             window.location.href='http://localhost:8100/#/main/pendings';
-//             window.location.reload(true);
-//         }).error(function(data){
-//             console.log(":(")
-//         });
-
-      
-
-//     };
-
-
-//     $scope.showAlert = function() {
-//    var alertPopup = $ionicPopup.alert({
-//      title: 'Leave Application Submitted!',
-//      template: 'Expect a Reply from us ASAP!'
-//    });
- 
-//    alertPopup.then(function(res) {
-//      $state.go('main.dash');
-//    });
-//  };
-
-//            $scope.SendRes = function() {
-//             console.log($("#email").text());
-//             var email = $("#email").text();
-//             var useremail = $("#useremail").text();
-
-//         if(window.plugins && window.plugins.emailComposer) {
-//             window.plugins.emailComposer.showEmailComposerWithCallback(function(result) {
-//                 console.log("Response -> " + result);
-//             }, 
-//             "Feedback for your App", // Subject
-//             "Your Leave has been declined by the H.R.",                      // Body
-//             // ["test@example.com"],    // To
-//             [useremail],                    // To
-//             null,                    // CC
-//             null,                    // BCC
-//             false,                   // isHTML
-//             null,                    // Attachments
-//             null);                   // Attachment Data
-//         }
-//         else{
-//            console.log("Sad Face");
-//         }
-
-
-//  var email = $("#email").text();
-//     console.log($("#useremail").text());
-//         $http.put('http://alphaprojects.site:3000/timeoffapi/application', {relEmail:email,status:'5'})
-//         .success(function(data){
-//             console.log(":)");
-//             window.location.href='http://localhost:8100/#/main/pendingsIV';
-//             // window.location.reload(true);
-//             window.location.reload('/gmd');
-//         }).error(function(data){
-//             console.log(":(")
-//         });
-       
-//     };
-
-//      $('#startDate').datetimepicker({
-//             format: 'd/m/Y',
-//             minDate: new Date(),
-//             timepicker: false,
-//             weekend: false,
-//             onSelectDate: function (dp, $input)
-//             {
-//                 $scope.applyModel.startDate = dp;
-//             }
-//         });
-
-//        $('#endDate').datetimepicker({
-//             format: 'd/m/Y',
-//             minDate: new Date(),
-//             timepicker: false,
-//             weekend: false,
-//             onSelectDate: function (dp, $input)
-//             {
-//                 $scope.applyModel.endDate = dp;
-//             }
-//         });
-// })
-
-
 .controller('AppleaveCtrl', function($scope, $http,$location,$state,$ionicPopup,$window){
 
 
@@ -356,8 +162,6 @@ angular.module('starter')
             $scope.applyModel.uId = dt.user_id;
              console.log($scope.applyModel);
 
-            // $location.path('/dash');
-            // $state.go('/dash');
         }).error(function(data){
             console.log(":(")
         });
@@ -374,8 +178,6 @@ angular.module('starter')
         $scope.whichapplication =$state.params.aId;
         $scope.data = { showDelete: false,showReorder: false };
 
-        // console.log($scope.item.relName);
-        // console.log(relName);
         var dt = $.jStorage.get("dataserve");
         console.log(dt.user_firstname);
 
@@ -404,7 +206,6 @@ angular.module('starter')
 
 
     $scope.Accept = function() {
-// $scope.item = {};
 console.log($("#status").text());
 console.log($("#email").text());
 
@@ -415,14 +216,12 @@ var email = $("#email").text();
       $http.put('http://alphaprojects.site:3000/timeoffapi/application', {relEmail:email,status:'2'})
         .success(function(data){
             console.log(":)");
-            window.location.href='http://localhost:8100/#/main/pendings';
-            window.location.reload(true);
-        }).error(function(data){
-            console.log(":(")
+            // window.location.href='http://localhost:8100/#/main/pendings';
+            // window.location.reload(true);
+
+                    $state.go("main.pendings");
+            window.location.reload('/admin'); 
         });
-
-      
-
     };
 
 
@@ -466,11 +265,10 @@ var email = $("#email").text();
         $http.put('http://alphaprojects.site:3000/timeoffapi/application', {relEmail:email,status:'5'})
         .success(function(data){
             console.log(":)");
-            window.location.href='http://localhost:8100/#/main/pendingsIV';
-            // window.location.reload(true);
-            window.location.reload('/gmd');
-        }).error(function(data){
-            console.log(":(")
+
+             $state.go("main.pendingsIV");
+            window.location.reload('/gmd'); 
+
         });
        
     };
@@ -500,64 +298,100 @@ var email = $("#email").text();
 
 
 
-.controller('superuserCtrller',['$scope', '$http', '$state', function($scope, $http, $state){
-    $http.get('http://alphaprojects.site:3000/timeoffapi/application/0').success(function(data){
-      console.log(data);
+// Apply for leave Controller 
+.controller('ApplyLeaveCtrl', function($scope, $http,$location,$state,$ionicPopup,$window){
 
-       $scope.logout = function(){
-    AuthService.logout();
-    $state.go('login');
-  };
 
-        $scope.application = data.users;
-        $scope.whichapplication =$state.params.aId;
-        $scope.data = { showDelete: false,showReorder: false };
+                  var dt = $.jStorage.get("dataserve");
+                  console.log(dt.user_leave_balance);
+                          var LeaveBal = dt.user_leave_balance;
+                          var max = LeaveBal;
 
-        console.log(data.users);
+                    min = 1;
+                    select = document.getElementById('LeaveDays');
 
-        $scope.onItemDelete = function(item) {
-          $scope.application.splice($scope.application.indexOf(item), 1);
-        }
+                    for (var i = min; i<=max; i++){
+                       var opt = document.createElement('option');
+                       opt.value = i;
+                       opt.innerHTML = i;
+                       select.appendChild(opt);
+                    }   
 
-        $scope.doRefresh = function(){
-          $http.get('http://alphaprojects.site:3000/timeoffapi/application/0').success(function(data){
-            $scope.application = data.users;
-            $scope.$broadcast('scroll.refreshComplete');
-          });
-        }
 
-        $scope.toggleStar = function(item){
-            item.star = !item.star;
-        }
+    $scope.applyModel = {};
 
-        $scope.moveItem = function(item, fromIndex, toIndex){
-          $scope.application.splice(fromIndex, 1);
-          $scope.application.splice(toIndex, 0, item);
-        };
-  });
+    $scope.onSubmit = function(valid) {
 
-     $scope.Accept = function() {
-// $scope.item = {};
-console.log($("#status").text());
-console.log($("#email").text());
+      if (valid)
+       {
+        var dt = $.jStorage.get("dataserve");
+        $scope.applyModel.uId = dt.user_id;
+          // console.log(dt.user_id);
+          // console.log(dt.user_firstname);
+          console.log($scope.applyModel.uId);
 
-var stat = $("#status").text();
-var email = $("#email").text();
-          
+             var ds = $.jStorage.get("dataserve");
+        $scope.applyModel.Uname = ds.user_firstname + " "+ ds.user_lastname;
 
-      $http.put('http://alphaprojects.site:3000/timeoffapi/application', {relEmail:email,status:'1'})
+         var dp = $.jStorage.get("dataserve");
+        $scope.applyModel.leavebalance = dp.user_leave_balance;
+
+
+         var dt = $.jStorage.get("dataserve");
+        $scope.applyModel.useremail = dt.user_email;
+
+
+      $http.post('http://alphaprojects.site:3000/timeoffapi/application',$scope.applyModel)
         .success(function(data){
             console.log(":)");
-            window.location.href='http://localhost:8100/#/main/pendingsIII';
-            window.location.reload(true);
-            window.location.reload('/superuser');
+            $scope.applyModel.uId = dt.user_id;
+             console.log($scope.applyModel);
+
+    
         }).error(function(data){
             console.log(":(")
         });
 
+      } else {
+          console.log("Invalid Form!");
+      }
+
     };
 
-      $scope.SendRes = function() {
+
+    $http.get('http://alphaprojects.site:3000/timeoffapi/application').success(function(data){
+        $scope.application = data.application;
+        $scope.whichapplication =$state.params.aId;
+        $scope.data = { showDelete: false,showReorder: false };
+
+        var dt = $.jStorage.get("dataserve");
+        console.log(dt.user_firstname);
+
+         var ds = $.jStorage.get("dataserve");
+
+        $scope.doRefresh = function(){
+          $http.get('http://alphaprojects.site:3000/timeoffapi/application').success(function(data){
+            $scope.application = data.application;
+            $scope.$broadcast('scroll.refreshComplete');
+          });
+        }
+  });
+
+
+
+
+    $scope.showAlert = function() {
+   var alertPopup = $ionicPopup.alert({
+     title: 'Leave Application Submitted!',
+     template: 'Expect a Reply from us ASAP!'
+   });
+ 
+   alertPopup.then(function(res) {
+     $state.go('main.dash');
+   });
+ };
+
+           $scope.SendRes = function() {
             console.log($("#email").text());
             var email = $("#email").text();
             var useremail = $("#useremail").text();
@@ -567,7 +401,7 @@ var email = $("#email").text();
                 console.log("Response -> " + result);
             }, 
             "Feedback for your App", // Subject
-            "Your Application has been declined by your H.O.D.",                      // Body
+            "Your Leave has been declined by the H.R.",                      // Body
             // ["test@example.com"],    // To
             [useremail],                    // To
             null,                    // CC
@@ -583,66 +417,54 @@ var email = $("#email").text();
 
  var email = $("#email").text();
     console.log($("#useremail").text());
-        $http.put('http://alphaprojects.site:3000/timeoffapi/application', {relEmail:email,status:'4'})
+        $http.put('http://alphaprojects.site:3000/timeoffapi/application', {relEmail:email,status:'5'})
         .success(function(data){
             console.log(":)");
-            window.location.href='http://localhost:8100/#/main/pendingsIV';
-            // window.location.reload(true);
-            window.location.reload('/gmd');
-        }).error(function(data){
-            console.log(":(")
+
+
+             $state.go("main.pendingsIV");
+            window.location.reload('/gmd'); 
+
         });
        
     };
 
+     $('#startDate').datetimepicker({
+            format: 'Y-m-d',
+            minDate: new Date(),
+            timepicker: false,
+            weekend: false,
+            onSelectDate: function (dp, $input)
+            {
+                $scope.applyModel.startDate = moment(dp).format('YYYY-MM-DD');
+                console.log($scope.applyModel.startDate); 
+            }
+        });
 
-        
+       $('#endDate').datetimepicker({
+            format: 'Y-m-d',
+            minDate: new Date(),
+            timepicker: false,
+            weekend: false,
+            onSelectDate: function (dp, $input)
+            {
 
-}])
-
-
-.controller('hrCtrller',['$scope', '$http', '$state', function($scope, $http, $state){
-    $http.get('http://alphaprojects.site:3000/timeoffapi/application/1').success(function(data){
-      console.log(data);
-        $scope.application = data.users;
-        $scope.whichapplication =$state.params.aId;
-        $scope.data = { showDelete: false,showReorder: false };
-
-        console.log(data.users);
-
-        $scope.onItemDelete = function(item) {
-          $scope.application.splice($scope.application.indexOf(item), 1);
-        }
-
-        $scope.doRefresh = function(){
-          $http.get('http://alphaprojects.site:3000/timeoffapi/application/1').success(function(data){
-            $scope.application = data.users;
-            $scope.$broadcast('scroll.refreshComplete');
-          });
-        }
-
-        $scope.toggleStar = function(item){
-            item.star = !item.star;
-        }
-
-        $scope.moveItem = function(item, fromIndex, toIndex){
-          $scope.application.splice(fromIndex, 1);
-          $scope.application.splice(toIndex, 0, item);
-        };
-  });
-
-}])
+                $scope.applyModel.endDate = moment(dp).format('YYYY-MM-DD');
+            }
+        });
+})
 
 
-//Staff to be approved by G.M.D.
 
- .controller('GMDCtrller',['$scope', '$http', '$state', function($scope, $http, $state,$location, AuthService){
-    $http.get('http://alphaprojects.site:3000/timeoffapi/application/2').success(function(data){
+//Controller for H.O.Ds
+.controller('SuperCtrller',['$scope', '$http', '$state', function($scope, $http, $state,$location, AuthService){
+    $http.get('http://alphaprojects.site:3000/timeoffapi/application').success(function(data){
 
           $scope.logout = function(){
     AuthService.logout();
     $state.go('login');
   };
+$scope.loader = true;
 
      
       console.log(data);
@@ -669,30 +491,9 @@ console.log(parse);
 var x = leave - parse;
 console.log(x);
 
-
-
-        $scope.onItemDelete = function(item) {
-          $scope.application.splice($scope.application.indexOf(item), 1);
-        }
-
-        $scope.doRefresh = function(){
-          $http.get('http://alphaprojects.site:3000/timeoffapi/application/2').success(function(data){
-            $scope.application = data.users;
-            $scope.$broadcast('scroll.refreshComplete');
-          });
-        }
-
-        $scope.toggleStar = function(item){
-            item.star = !item.star;
-        }
-
-        $scope.moveItem = function(item, fromIndex, toIndex){
-          $scope.application.splice(fromIndex, 1);
-          $scope.application.splice(toIndex, 0, item);
-        };
   });
 
-     $scope.FinalAccept = function() {
+     $scope.Accept = function() {
 // $scope.item = {};
 console.log($("#status").text());
 console.log($("#email").text());
@@ -721,26 +522,14 @@ var x = leaveparse - parse;
 console.log(x);
 
 
-    $http.put('http://alphaprojects.site:3000/timeoffapi/biodatas', {email:userEmail,leave_balance: x})
+      $http.put('http://alphaprojects.site:3000/timeoffapi/application', {relEmail:email,status:'1'})
         .success(function(data){
             console.log(":)");
-            // window.location.href='http://localhost:8100/#/main/pendingsIV';
+            //window.location.href='http://localhost:8100/#/main/pendingsIII';
+            $state.go("main.pendingsIII");
             // window.location.reload(true);
-            // window.location.reload('/gmd');
-        }).error(function(data){
-            console.log(":(")
-        });
-
-
-      $http.put('http://alphaprojects.site:3000/timeoffapi/application', {relEmail:email,status:'3'})
-        .success(function(data){
-            console.log(":)");
-            window.location.href='http://localhost:8100/#/main/pendingsIV';
-            // window.location.reload(true);
-            window.location.reload('/gmd');
-        }).error(function(data){
-            console.log(":(")
-        });   
+            window.location.reload('/superuser');
+        });  
 
 
         var useremail = $("#useremail").text();
@@ -797,13 +586,278 @@ console.log(x);
         $http.put('http://alphaprojects.site:3000/timeoffapi/application', {relEmail:email,status:'6'})
         .success(function(data){
             console.log(":)");
-            window.location.href='http://localhost:8100/#/main/pendingsIV';
-            // window.location.reload(true);
+                $state.go("main.pendingsIV");
             window.location.reload('/gmd');
         }).error(function(data){
             console.log(":(")
         });   
        
+    };
+}])
+
+
+
+
+
+.controller('superuserCtrller',['$scope', '$http', '$state', function($scope, $http, $state){
+    $http.get('http://alphaprojects.site:3000/timeoffapi/application/0').success(function(data){
+      console.log(data);
+
+       $scope.logout = function(){
+    AuthService.logout();
+    $state.go('login');
+  };
+
+        $scope.application = data.users;
+        $scope.whichapplication =$state.params.aId;
+        $scope.data = { showDelete: false,showReorder: false };
+
+        console.log(data.users);
+
+        $scope.onItemDelete = function(item) {
+          $scope.application.splice($scope.application.indexOf(item), 1);
+        }
+
+        $scope.doRefresh = function(){
+          $http.get('http://alphaprojects.site:3000/timeoffapi/application/0').success(function(data){
+            $scope.application = data.users;
+            $scope.$broadcast('scroll.refreshComplete');
+          });
+        }
+  });
+
+     $scope.Accept = function() {
+// $scope.item = {};
+console.log($("#status").text());
+console.log($("#email").text());
+
+var stat = $("#status").text();
+var email = $("#email").text();
+          
+
+      $http.put('http://alphaprojects.site:3000/timeoffapi/application', {relEmail:email,status:'1'})
+        .success(function(data){
+             $state.go("main.pendingsIII");
+            window.location.reload('/superuser'); 
+        });
+
+    };
+
+      $scope.SendRes = function() {
+            console.log($("#email").text());
+            var email = $("#email").text();
+            var useremail = $("#useremail").text();
+
+        if(window.plugins && window.plugins.emailComposer) {
+            window.plugins.emailComposer.showEmailComposerWithCallback(function(result) {
+                console.log("Response -> " + result);
+            }, 
+            "Feedback for your App", // Subject
+            "Your Application has been declined by your H.O.D.",                      // Body
+            // ["test@example.com"],    // To
+            [useremail],                    // To
+            null,                    // CC
+            null,                    // BCC
+            false,                   // isHTML
+            null,                    // Attachments
+            null);                   // Attachment Data
+        }
+        else{
+           console.log("Sad Face");
+        }
+
+
+ var email = $("#email").text();
+    console.log($("#useremail").text());
+        $http.put('http://alphaprojects.site:3000/timeoffapi/application', {relEmail:email,status:'4'})
+        .success(function(data){
+
+               $state.go("main.pendingsIV");
+            window.location.reload('/gmd'); 
+        });
+       
+    };
+
+
+        
+
+}])
+
+
+.controller('hrCtrller',['$scope', '$http', '$state', function($scope, $http, $state){
+    $http.get('http://alphaprojects.site:3000/timeoffapi/application/1').success(function(data){
+      console.log(data);
+        $scope.application = data.users;
+        $scope.whichapplication =$state.params.aId;
+        $scope.data = { showDelete: false,showReorder: false };
+
+        $scope.doRefresh = function(){
+          $http.get('http://alphaprojects.site:3000/timeoffapi/application/1').success(function(data){
+            $scope.application = data.users;
+            $scope.$broadcast('scroll.refreshComplete');
+          });
+        }
+
+  });
+
+}])
+
+
+//Staff to be approved by G.M.D.
+
+ .controller('GMDCtrller',['$scope', '$http', '$state', function($scope, $http, $state,$location, AuthService){
+    $http.get('http://alphaprojects.site:3000/timeoffapi/application/2').success(function(data){
+
+          $scope.logout = function(){
+    AuthService.logout();
+    $state.go('login');
+  };
+
+     
+      console.log(data);
+        $scope.application = data.users;
+        $scope.whichapplication =$state.params.aId;
+        $scope.data = { showDelete: false,showReorder: false };
+
+        console.log(data.users);
+        var dt = $.jStorage.get("dataserve");
+
+    $scope.leavebalance = dt.user_leave_balance;
+
+    var leave = $scope.leavebalance;
+
+console.log($scope.leavebalance);
+console.log($("#days").text());
+console.log($("#email").text());
+console.log($("#status").text());
+
+var stats = $("#days").text();
+console.log(stats);
+var parse = parseInt(stats);
+console.log(parse);
+var x = leave - parse;
+console.log(x);
+
+
+
+        $scope.onItemDelete = function(item) {
+          $scope.application.splice($scope.application.indexOf(item), 1);
+        }
+
+        $scope.doRefresh = function(){
+          $http.get('http://alphaprojects.site:3000/timeoffapi/application/2').success(function(data){
+            $scope.application = data.users;
+            $scope.$broadcast('scroll.refreshComplete');
+          });
+        }
+  });
+
+     $scope.FinalAccept = function() {
+// $scope.item = {};
+console.log($("#status").text());
+console.log($("#email").text());
+console.log($("#days").text());
+console.log($("#userEmail").text());
+
+var dt = $.jStorage.get("dataserve");
+
+    $scope.leavebalance = dt.user_leave_balance;
+
+    var leave = $scope.leavebalance;
+
+var stat = $("#status").text();
+var email = $("#email").text();
+var stats = $("#days").text();
+var userEmail = $("#useremail").text();
+var leavebalance = $("#leavedays").text();
+
+var parse = parseInt(stats);
+var leaveparse = parseInt(leavebalance);
+
+console.log(parse);
+console.log(leave);
+console.log(leaveparse);
+var x = leaveparse - parse;
+console.log(x);
+
+
+    $http.put('http://alphaprojects.site:3000/timeoffapi/biodatas', {email:userEmail,leave_balance: x})
+        .success(function(data){
+            console.log(":)");
+            // window.location.href='http://localhost:8100/#/main/pendingsIV';
+            // window.location.reload(true);
+            // window.location.reload('/gmd');
+        }).error(function(data){
+            console.log(":(")
+        });
+
+
+      $http.put('http://alphaprojects.site:3000/timeoffapi/application', {relEmail:email,status:'3'})
+        .success(function(data){
+
+              $state.go("main.pendingsIV");
+            window.location.reload('/gmd');
+
+        }); 
+
+
+        var useremail = $("#useremail").text();
+            var email = $("#email").text();
+
+        if(window.plugins && window.plugins.emailComposer) {
+            window.plugins.emailComposer.showEmailComposerWithCallback(function(result) {
+                console.log("Response -> " + result);
+            }, 
+            "Feedback for your Application", // Subject
+            "Your Application has been approved!. Your Reliever was also sent this mail.",                      // Body
+            // ["test@example.com"],    // To
+            [useremail],                    // To
+            [email],                    // CC
+            null,                    // BCC
+            false,                   // isHTML
+            null,                    // Attachments
+            null);                   // Attachment Data
+        }
+        else{
+           console.log("Sad Face");
+        }   
+
+    };
+
+         $scope.SendRejEmail = function() {
+            console.log($("#email").text());
+            console.log($("#useremail").text());
+            var useremail = $("#useremail").text();
+            var email = $("#email").text();
+
+
+        if(window.plugins && window.plugins.emailComposer) {
+            window.plugins.emailComposer.showEmailComposerWithCallback(function(result) {
+                console.log("Response -> " + result);
+            }, 
+            "Feedback for your Application", // Subject
+            "Your Application has been declined by the G.M.D",                      // Body
+            // ["test@example.com"],    // To
+            [useremail],                    // To
+            null,                    // CC
+            null,                    // BCC
+            false,                   // isHTML
+            null,                    // Attachments
+            null);                   // Attachment Data
+        }
+        else{
+           console.log("Sad Face");
+        }
+
+
+ var email = $("#email").text();
+    console.log($("#useremail").text());
+        $http.put('http://alphaprojects.site:3000/timeoffapi/application', {relEmail:email,status:'6'})
+        .success(function(data){
+
+               $state.go("main.pendingsIV");
+            window.location.reload('/gmd');
+        });   
     };
 }])
 
@@ -820,10 +874,6 @@ console.log(x);
 
         console.log(data.users);
 
-        $scope.onItemDelete = function(item) {
-          $scope.application.splice($scope.application.indexOf(item), 1);
-        }
-
         $scope.doRefresh = function(){
           $http.get('http://alphaprojects.site:3000/timeoffapi/application/3').success(function(data){
             $scope.application = data.users;
@@ -831,14 +881,6 @@ console.log(x);
           });
         }
 
-        $scope.toggleStar = function(item){
-            item.star = !item.star;
-        }
-
-        $scope.moveItem = function(item, fromIndex, toIndex){
-          $scope.application.splice(fromIndex, 1);
-          $scope.application.splice(toIndex, 0, item);
-        };
   });
 }])
 
@@ -864,11 +906,12 @@ console.log(x);
         .success(function(data){
             console.log(":)") ;
             // $location.path('/admin');
-            window.location.href='http://localhost:8100/#/main/admin';
-            window.location.reload(true);
+            // window.location.href='http://localhost:8100/#/main/admin';
+            // window.location.reload(true);
+            // window.location.reload('/admin');
+
+               $state.go("main.admin");
             window.location.reload('/admin');
-        }).error(function(data){
-            console.log(":(")
         });
 
       } else {
@@ -959,20 +1002,11 @@ console.log($scope.userEmail);
 console.log(user_password);
 console.log(data);
 
-// var password = $("#user_password").text();
-// var password1 = $("#user_password1").text();
-
-// console.log($("#user_password").text());
-
-// console.log(password);
-// console.log(password1);
-
 
     $http.put('http://alphaprojects.site:3000/timeoffapi/biodatas/email', {email:usrEmail,password: data})
         .success(function(data){
-            console.log(":)");
-            window.location.href='http://localhost:8100/#/main/dash';
-            window.location.reload(true);
+
+                           $state.go("main.dash");
             window.location.reload('/admin');
         }).error(function(data){
             console.log(":(")
@@ -990,27 +1024,6 @@ console.log(data);
 // //empty string means no validation error
 // }
 }])
-
-
-
-// .controller('EmailController', function($scope) {
-//     $scope.sendFeedback= function() {
-//         if(window.plugins && window.plugins.emailComposer) {
-//             window.plugins.emailComposer.showEmailComposerWithCallback(function(result) {
-//                 console.log("Response -> " + result);
-//             }, 
-//             "Feedback for your App", // Subject
-//             "",                      // Body
-//             ["test@example.com"],    // To
-//             null,                    // CC
-//             null,                    // BCC
-//             false,                   // isHTML
-//             null,                    // Attachments
-//             null);                   // Attachment Data
-//         }
-//     }
-// })
-
 
 
  //Update Leave Balance Controller
@@ -1041,12 +1054,10 @@ $scope.leaveModel={};
            console.log(add);
               $http.put('http://alphaprojects.site:3000/timeoffapi/biodatas', {email:useremail,leave_balance: add})
         .success(function(data){
-            console.log(":)");
-            window.location.href='http://localhost:8100/#/main/leavedays';
-            window.location.reload(true);
+
+                           $state.go("main.leavedays");
             window.location.reload('/admin');
-        }).error(function(data){
-            console.log(":(")
+
         });
             $.jStorage.set("dataserve", biodatas.biodatas[key]);
                  // console.log(biodatas.biodatas[key].user_leave_balance);
@@ -1063,62 +1074,6 @@ $scope.leaveModel={};
  }
      
 }])
-
-
-//  .controller('EmailCtrl', function($cordovaEmailComposer, $scope) {
-// $cordovaEmailComposer.isAvailable().then(function() {
-//    // is available
-//    alert("available");
-//     console.log("Hello!");
-//  }, function () {
-//    // not available
-//     console.log("Hello!");
-//    alert("not available");
-//  });
-//  $scope.sendEmail = function(){
-//   var email = {
-//      to: 'teste@example.com',
-//      cc: 'teste@example.com',
-//      bcc: ['john@doe.com', 'jane@doe.com'],
-//      attachments: [
-//        'file://img/logo.png',
-//        'res://icon.png',
-//        'base64:icon.png//iVBORw0KGgoAAAANSUhEUg...',
-//        'file://README.pdf'
-//      ],
-//      subject: 'Mail subject',
-//      body: 'How are you? Nice greetings from Leipzig',
-//      isHtml: true
-//   };
-
-//  $cordovaEmailComposer.open(email).then(null, function () {
-//    // user cancelled email
-//   });
-//  console.log("Hello!");
-//  }
-// })
-
-// .controller('FeedbackCtrl', function ($scope, $ionicPopup, $stateParams,$http) {
-//   $scope.feedback = {};
-//   $scope.SendMail = function(feedback){
-//     // var url = urlstr_custom + "feedback/?name=" + $.jStorage.get("name")  + "&comment=" + $scope.feedback.msg;
-//     console.log(url);
-//     $http.get(url).success(function (data) {
-//         $scope.response = data;
-//     console.log($scope.response);
-//        var alertPopup = $ionicPopup.alert({
-//                     title: 'Success',
-//                     template: $scope.response[0].status
-//                 });
-
-//            $scope.feedback.msg = '';
-
-   
-//     });
-//   };
-  
-// })
-
 
 
 

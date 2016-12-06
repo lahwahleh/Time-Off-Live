@@ -1,12 +1,9 @@
 <ion-view view-title="Pending Detail">
-
-        <ion-nav-buttons side="primary">
-            <button class="button button-icon ion-minus-circled" ng-click="data.showDelete =!data.showDelete; data.showReorder= false;"></button> 
-        </ion-nav-buttons>  
-
-        <ion-nav-buttons side="secondary">   
-            <button class="button button-icon ion-navicon" ng-click="data.showReorder =!data.showReorder; data.showDelete = false;"></button>
-        </ion-nav-buttons>
+ <ion-nav-bar  class="bar-balanced">
+      <ion-nav-back-button>
+      <i class = "icon ion-arrow-left-c"></i>
+      </ion-nav-back-button>
+    </ion-nav-bar>
 
       <ion-content><ion-refresher on-refresh="doRefresh()"></ion-refresher>
       <br>

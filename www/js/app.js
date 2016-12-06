@@ -77,7 +77,7 @@ angular.module('starter', ['ionic'])
     views: {
       'dash-tab': {
         templateUrl: 'templates/apply.html',
-        controller: 'AppleaveCtrl'
+        controller: 'ApplyLeaveCtrl'
       }
     }
   })
@@ -190,22 +190,13 @@ angular.module('starter', ['ionic'])
     }
   })
 
-  .state('main.userdetailsII', {
-    url:'main/pendingsII/:aId',
-    views: {
-      'admin-tab': {
-        templateUrl: 'templates/userdetailsII.html',
-        controller:'DashCtrller'
-      }
-    }
-  })
 
    .state('main.userdetailsIII', {
     url:'main/pendingsIII/:aId',
     views: {
       'admin-tab': {
         templateUrl: 'templates/userdetailsIII.html',
-        controller:'superuserCtrller'
+        controller:'SuperCtrller'
       }
     }
   })
@@ -281,20 +272,6 @@ angular.module('starter', ['ionic'])
     }
   })
 
-
-
- // .state('main.gmd', {
- //    url:'main/gmd',
- //    views: {
- //      'gmd-tab': {
- //        templateUrl: 'templates/gmd.html',
- //        controller:'LeaveCtrller'   
- //      }
- //    },
- //     data: {
- //      authorizedRoles: [USER_ROLES.gmd]
- //    }GMDCtrller
- //  })
    
 
    .state('main.gmd', {

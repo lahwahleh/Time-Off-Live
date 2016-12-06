@@ -6,19 +6,9 @@
     </ion-nav-bar>
 
       <ion-content class="has-subheader"><ion-refresher on-refresh="doRefresh()"></ion-refresher>
-  <div class="container">
-     <a href="#main/admin"> <img id="button" src="img/tap.png"> </a>
-</div>
 
       <br>
-              <!-- <div class="bar bar-subheader item-input-inset bar-light">
-                <label class="item-input-wrapper"><i class="icon ion-search placeholder-icon"></i>
-                <input type="search" ng-model="query"placeholder="Search">
-                </label>
-            </div> -->
-   
             
-              
           <ion-list show-delete="data.showDelete" show-reorder="data.showReorder">
               <ion-item ng-class="{'star': item.star}" ng-repeat='item in application | filter: query'  href="#/main/pendings/{{ item.user_appDate }}">
                           <h1>{{item.user_Uname}} </h1>
